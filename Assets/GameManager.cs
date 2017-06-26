@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
     public int playerHealth = 100;
     public Text playerHealthText;
     public static GameManager instance;
-    float spawnRate = 0.5f;
+    public float spawnRate = 0.5f;
     GameObject spiders;
 
     private void Awake() {
