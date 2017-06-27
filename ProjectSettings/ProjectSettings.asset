@@ -509,11 +509,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: SpiderSlayer
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: Comcast Labs
+  metroCertificateIssuer: Comcast Labs
+  metroCertificateNotAfter: 800a8dd65a0ed401
   metroApplicationDescription: Kill spiders that spawn from wall
   wsaImages: {}
   metroTileShortName: 
@@ -541,7 +541,7 @@ PlayerSettings:
       InternetClient: False
       InternetClientServer: False
       Location: False
-      Microphone: False
+      Microphone: True
       MusicLibrary: False
       Objects3D: False
       PhoneCall: False

@@ -623,6 +623,9 @@ GameObject:
   - component: {fileID: 111651335904254492}
   - component: {fileID: 82824865466176166}
   - component: {fileID: 114733779242456282}
+  - component: {fileID: 114835933014292568}
+  - component: {fileID: 114936055825528554}
+  - component: {fileID: 65091005297863276}
   m_Layer: 0
   m_Name: Walking Spider
   m_TagString: Untagged
@@ -2183,6 +2186,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1983001827366862}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65091005297863276
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426096837615238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!82 &82824865466176166
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2300,6 +2315,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33a9c9a95a184e64993faccaeb17f338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114835933014292568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426096837615238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2a32f9ebc013148a3bb80b5c03d479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateInterval: 0.25
+  MaxDistance: 20
+  MaxObjects: 10
+--- !u!114 &114936055825528554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426096837615238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bebf34b83498e2949947f97991e4b401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &136925905447548814

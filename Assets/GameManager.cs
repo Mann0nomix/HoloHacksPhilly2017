@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
     public int playerHealth = 100;
     public Text playerHealthText;
+    public Text killText;
     public static GameManager instance;
     public float spawnRate = 0.5f;
-    GameObject spiders;
+    [HideInInspector] public GameObject spiders;
+    [HideInInspector] public int killCount = 0;
 
     private void Awake() {
         instance = this;
@@ -30,7 +32,7 @@ public class GameManager : MonoBehaviour {
         newSpider.transform.parent = spiders.transform;
         //newSpider.transform.rotation = Quaternion.Euler(Random.Range(0, 180), Random.Range(0, 180), 0);
         newSpider.transform.rotation = Quaternion.Euler(0, Random.Range(0, 180), 0);
-        if(spiders.transform.childCount > 100) {
+        if(spiders.transform.childCount > 20) {
             Destroy(spiders.transform.GetChild(0).gameObject);
         }
     }

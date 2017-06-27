@@ -10,7 +10,7 @@ public class SpiderMover : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         spiderSound = GetComponent<AudioSource>();
-        spiderSound.Play();
+        //spiderSound.Play();
     }
 
     // Update is called once per frame
@@ -19,9 +19,23 @@ public class SpiderMover : MonoBehaviour {
         transform.LookAt(new Vector3(0, -3, 0));
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, -3, 0), step);
         if (transform.position.y == -3) {
+            ManageHealth();
+            Destroy(gameObject);
+            //spiderSound.Play();
+        }
+    }
+
+    private void ManageHealth() {
+        if(GameManager.instance.playerHealth > 0) {
             GameManager.instance.playerHealth -= 2;
             GameManager.instance.playerHealthText.text = "Player Health: " + GameManager.instance.playerHealth.ToString() + "%";
-            Destroy(gameObject);
         }
+    }
+
+    public void OnSelect() {
+        spiderSound.Play();
+        gameObject.AddComponent<Rigidbody>().useGravity = true;
+        GameManager.instance.killCount += 1;
+        //GameManager.instance.killedText.text = "Spiders Killed: " + GameManager.instance.killCount;
     }
 }

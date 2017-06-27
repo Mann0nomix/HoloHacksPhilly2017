@@ -335,6 +335,8 @@ namespace HoloToolkit.Unity.InputModule
             {
                 InputClickedEventData casted = ExecuteEvents.ValidateEventData<InputClickedEventData>(eventData);
                 handler.OnInputClicked(casted);
+
+                eventData.selectedObject.AddComponent<Rigidbody>();
             };
 
         public void RaiseInputClicked(IInputSource source, uint sourceId, int tapCount)
