@@ -238,22 +238,4 @@ MonoBehaviour:
   - Name: Off Hologram
     CursorState: 2
     CursorObject: {fileID: 1000013615056792}
-  - Name: Off Hologram
-    CursorState: 2
-    CursorObject: {fileID: 1000013615056792}
-  - Name: Off Hologram
-    CursorState: 2
-    CursorObject: {fileID: 1000013615056792}
-  - Name: Off Hologram
-    CursorState: 2
-    CursorObject: {fileID: 1000013615056792}
-  - Name: Off Hologram
-    CursorState: 2
-    CursorObject: {fileID: 1000013615056792}
-  - Name: Off Hologram
-    CursorState: 2
-    CursorObject: {fileID: 1000013615056792}
-  - Name: Off Hologram
-    CursorState: 2
-    CursorObject: {fileID: 1000013615056792}
   ParentTransform: {fileID: 0}
