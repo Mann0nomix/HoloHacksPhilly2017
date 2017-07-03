@@ -30,8 +30,9 @@ public class GameManager : MonoBehaviour {
     void Spawn() {
         GameObject newSpider = Instantiate(Resources.Load<GameObject>("Prefabs/SpiderAndWeb"));
         newSpider.transform.parent = spiders.transform;
+        //360 for completely surround. 180 for just one side (easy mode)
         //newSpider.transform.rotation = Quaternion.Euler(Random.Range(0, 180), Random.Range(0, 180), 0);
-        newSpider.transform.rotation = Quaternion.Euler(0, Random.Range(0, 180), 0);
+        newSpider.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
         if(spiders.transform.childCount > 20) {
             Destroy(spiders.transform.GetChild(0).gameObject);
         }
