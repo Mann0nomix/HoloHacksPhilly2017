@@ -35,6 +35,7 @@ public class SpiderMover : MonoBehaviour {
     public void OnSelect() {
         spiderSound.Play();
         gameObject.AddComponent<Rigidbody>().useGravity = true;
+        gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * 5);
         GameManager.instance.killCount += 1;
         //GameManager.instance.killedText.text = "Spiders Killed: " + GameManager.instance.killCount;
     }
