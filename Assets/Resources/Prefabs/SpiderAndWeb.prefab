@@ -1107,7 +1107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4437453905834448}
   - component: {fileID: 33564759159611546}
-  - component: {fileID: 136925905447548814}
   - component: {fileID: 23700582710565880}
   m_Layer: 0
   m_Name: SpiderWebLine
@@ -2209,7 +2208,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243000010338419354, guid: e128018471253b34e8695b9bc3ca9ceb,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: f6a45105bb363334aa4bd944d3cb05fa, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2342,19 +2341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bebf34b83498e2949947f97991e4b401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &136925905447548814
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1983001827366862}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137276616739288886
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
