@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using HoloToolkit.Unity.InputModule;
 using System;
 
-public class SpeechCommands : MonoBehaviour, IInputClickHandler {
+public class SpeechCommands : MonoBehaviour {
     Vector3 originalPosition;
     GameObject spiderCollection;
 
@@ -39,13 +38,5 @@ public class SpeechCommands : MonoBehaviour, IInputClickHandler {
 
     public void RestoreHealth() {
         GameManager.instance.playerHealth = 100;
-    }
-
-    public void OnInputClicked(InputClickedEventData eventData) {
-        // If the sphere has no Rigidbody component, add one to enable physics.
-        if (!this.GetComponent<Rigidbody>()) {
-            Rigidbody rigidbody = this.gameObject.AddComponent<Rigidbody>();
-            rigidbody.useGravity = true;
-        }
     }
 }

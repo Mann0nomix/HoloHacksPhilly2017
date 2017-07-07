@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
-public class SpiderMover : MonoBehaviour {
+public class SpiderMover : MonoBehaviour, IInputHandler {
     float step;
     float speed = 3f;
     AudioSource spiderSound;
@@ -23,6 +25,10 @@ public class SpiderMover : MonoBehaviour {
             Destroy(gameObject);
             //spiderSound.Play();
         }
+
+        if (Input.GetMouseButtonDown(0)) {
+            OnInputClicked(null);
+        }
     }
 
     private void ManageHealth() {
@@ -32,11 +38,20 @@ public class SpiderMover : MonoBehaviour {
         }
     }
 
-    public void OnSelect() {
-        spiderSound.Play();
-        gameObject.AddComponent<Rigidbody>().useGravity = true;
-        gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * 5);
-        GameManager.instance.killCount += 1;
-        //GameManager.instance.killedText.text = "Spiders Killed: " + GameManager.instance.killCount;
+    public void OnInputClicked(InputClickedEventData eventData) {
+        // If the sphere has no Rigidbody component, add one to enable physics.
+        if (!this.GetComponent<Rigidbody>()) {
+            spiderSound.Play();
+            Rigidbody rigidbody = this.gameObject.AddComponent<Rigidbody>();
+            rigidbody.AddForce(Vector3.forward * 1000);
+            GameManager.instance.killCount += 1;
+            //GameManager.instance.killedText.text = "Spiders Killed: " + GameManager.instance.killCount;
+        }
+    }
+
+    public void OnInputUp(InputEventData eventData) {
+    }
+
+    public void OnInputDown(InputEventData eventData) {
     }
 }
