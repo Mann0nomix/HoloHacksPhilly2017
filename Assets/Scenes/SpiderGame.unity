@@ -441,7 +441,7 @@ Prefab:
     - target: {fileID: 114000013851064060, guid: b2db04283121ca74495c2ee000fb4243,
         type: 2}
       propertyPath: MinCursorDistance
-      value: 25
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2db04283121ca74495c2ee000fb4243, type: 2}
@@ -652,6 +652,11 @@ Prefab:
         type: 2}
       propertyPath: UseRailsNavigation
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012009196210, guid: 3eddd1c29199313478dd3f912bfab2ab,
+        type: 2}
+      propertyPath: MaxGazeCollisionDistance
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3eddd1c29199313478dd3f912bfab2ab, type: 2}
