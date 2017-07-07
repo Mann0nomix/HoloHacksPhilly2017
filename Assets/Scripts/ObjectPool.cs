@@ -9,7 +9,9 @@ public class ObjectPool : MonoBehaviour {
     public ObjectPool(int size, GameObject prefab) {
         list = new List<GameObject>();
         for (int i = 0; i < size; i++) {
-            GameObject obj = (GameObject)Instantiate(prefab);
+            GameObject obj = Instantiate(prefab);
+            obj.SetActive(false);
+            obj.transform.parent = gameObject.transform;
             list.Add(obj);
         }
     }
@@ -23,7 +25,7 @@ public class ObjectPool : MonoBehaviour {
         return null;
     }
 
-    public void DestroyObjectPool(GameObject obj) {
+    public void DeactivatePoolObject(GameObject obj) {
         list.Add(obj);
         obj.SetActive(false);
     }
